@@ -77,7 +77,7 @@ class BasicDetails extends React.Component {
                       </Label>
                       <Input
                         type="text"
-                        placeholder="Search Dashboard"
+                        placeholder=""
                         id="no-borders-input"
                         className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                         readOnly={this.state.readOnly}
@@ -90,7 +90,7 @@ class BasicDetails extends React.Component {
                       </Label>
                       <Input
                         type="text"
-                        placeholder="Search Dashboard"
+                        placeholder=""
                         id="no-borders-input"
                         className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                         readOnly={this.state.readOnly}
@@ -103,7 +103,7 @@ class BasicDetails extends React.Component {
                       </Label>
                       <Input
                         type="text"
-                        placeholder="Search Dashboard"
+                        placeholder=""
                         id="no-borders-input"
                         className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                         defaultValue={this.state.basicDetails.countryName}
@@ -116,7 +116,7 @@ class BasicDetails extends React.Component {
                       </Label>
                       <Input
                         type="text"
-                        placeholder="Search Dashboard"
+                        placeholder=""
                         id="no-borders-input"
                         className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                         defaultValue={this.state.basicDetails.countryCode}
@@ -131,7 +131,7 @@ class BasicDetails extends React.Component {
                       </Label>
                       <Input
                         type="text"
-                        placeholder="Search Dashboard"
+                        placeholder=""
                         id="no-borders-input"
                         className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                         defaultValue={this.state.basicDetails.registrationNum}
@@ -144,7 +144,7 @@ class BasicDetails extends React.Component {
                       </Label>
                       <Input
                         type="text"
-                        placeholder="Search Dashboard"
+                        placeholder=""
                         id="no-borders-input"
                         className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                         defaultValue={this.state.basicDetails.leiNumber}
@@ -157,7 +157,7 @@ class BasicDetails extends React.Component {
                       </Label>
                       <Input
                         type="text"
-                        placeholder="Search Dashboard"
+                        placeholder=""
                         id="no-borders-input"
                         className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                         defaultValue={this.state.basicDetails.isciCode}
@@ -172,7 +172,7 @@ class BasicDetails extends React.Component {
                       </Label>
                       <Input
                         type="text"
-                        placeholder="Search Dashboard"
+                        placeholder=""
                         id="no-borders-input"
                         className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                         defaultValue={this.state.basicDetails.incorpationCountry}
@@ -185,7 +185,7 @@ class BasicDetails extends React.Component {
                       </Label>
                       <Input
                         type="text"
-                        placeholder="Search Dashboard"
+                        placeholder=""
                         id="no-borders-input"
                         className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                         defaultValue={this.state.basicDetails.date}
@@ -198,7 +198,7 @@ class BasicDetails extends React.Component {
                       </Label>
                       <Input
                         type="text"
-                        placeholder="Search Dashboard"
+                        placeholder=""
                         id="no-borders-input"
                         className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                         defaultValue={this.state.basicDetails.entityType}
@@ -227,7 +227,7 @@ class BasicDetails extends React.Component {
                           </Label>
                           <Input
                             type="text"
-                            placeholder="Search Dashboard"
+                            placeholder=""
                             id="no-borders-input"
                             className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                             defaultValue="22 Street 11"
@@ -240,7 +240,7 @@ class BasicDetails extends React.Component {
                           </Label>
                           <Input
                             type="text"
-                            placeholder="Search Dashboard"
+                            placeholder=""
                             id="no-borders-input"
                             className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                             defaultValue="Singapore"
@@ -253,7 +253,7 @@ class BasicDetails extends React.Component {
                           </Label>
                           <Input
                             type="text"
-                            placeholder="Search Dashboard"
+                            placeholder=""
                             id="no-borders-input"
                             className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                             defaultValue="Singapore"
@@ -268,7 +268,7 @@ class BasicDetails extends React.Component {
                           </Label>
                           <Input
                             type="text"
-                            placeholder="Search Dashboard"
+                            placeholder=""
                             id="no-borders-input"
                             className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                             defaultValue="#22-30"
@@ -281,7 +281,7 @@ class BasicDetails extends React.Component {
                           </Label>
                           <Input
                             type="text"
-                            placeholder="Search Dashboard"
+                            placeholder=""
                             id="no-borders-input"
                             className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                             defaultValue="-"
@@ -294,7 +294,7 @@ class BasicDetails extends React.Component {
                           </Label>
                           <Input
                             type="text"
-                            placeholder="Search Dashboard"
+                            placeholder=""
                             id="no-borders-input"
                             className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                             defaultValue="112233"
@@ -314,7 +314,7 @@ class BasicDetails extends React.Component {
                           </Label>
                           <Input
                             type="text"
-                            placeholder="Search Dashboard"
+                            placeholder=""
                             id="no-borders-input"
                             className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                             defaultValue="22 Street 11"
@@ -327,7 +327,7 @@ class BasicDetails extends React.Component {
                           </Label>
                           <Input
                             type="text"
-                            placeholder="Search Dashboard"
+                            placeholder=""
                             id="no-borders-input"
                             className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                             defaultValue="Singapore"
@@ -339,7 +339,7 @@ class BasicDetails extends React.Component {
                           </Label>
                           <Input
                             type="text"
-                            placeholder="Search Dashboard"
+                            placeholder=""
                             id="no-borders-input"
                             className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                             defaultValue="Singapore"
@@ -354,7 +354,7 @@ class BasicDetails extends React.Component {
                           </Label>
                           <Input
                             type="text"
-                            placeholder="Search Dashboard"
+                            placeholder=""
                             id="no-borders-input"
                             className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                             defaultValue="#22-30"
@@ -367,7 +367,7 @@ class BasicDetails extends React.Component {
                           </Label>
                           <Input
                             type="text"
-                            placeholder="Search Dashboard"
+                            placeholder=""
                             id="no-borders-input"
                             className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                             defaultValue="-"
@@ -380,7 +380,7 @@ class BasicDetails extends React.Component {
                           </Label>
                           <Input
                             type="text"
-                            placeholder="Search Dashboard"
+                            placeholder=""
                             id="no-borders-input"
                             className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
                             defaultValue="112233"

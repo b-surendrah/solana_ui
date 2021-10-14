@@ -34,6 +34,10 @@
   transition: width $sidebar-transition-time ease-in-out;
 }
 
+.closeSidbar{
+  width: unset !important;
+}
+
 .sidebarClose.sidebarWrapper {
   width: $sidebar-width-closed; 
   @include media-breakpoint-down(sm) {

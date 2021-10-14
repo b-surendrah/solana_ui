@@ -27,6 +27,7 @@ class Dashboard extends React.Component {
 
   constructor(props) {
     super(props);
+    localStorage.setItem('pathName', '2');
     this.state = {
       graph: null,
       checkedArr: [false, false, false],

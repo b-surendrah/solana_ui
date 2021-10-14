@@ -55,5 +55,6 @@
   color: $text-muted;
 }
 .hideSideBar{
-  margin-left: -15vw !important;
+  margin-left: 0px !important;
+  left: unset !important;
 }

@@ -48,6 +48,7 @@ const SortableList = SortableContainer(({ items }) => (
 class MyClients extends React.Component {
   constructor() {
     super();
+    localStorage.setItem('pathName', '2');
     this.state = {
       sortableList: [
         {

@@ -250,22 +250,28 @@ class Header extends React.Component {
         /> */}
         <Nav>
           <NavItem>
-            <NavLink
-              className={`d-md-down-none ${s.toggleSidebar}`}
-              id="toggleSidebar"
-              onClick={this.toggleSidebar}
-            >
-              <span className={s.headerSvgFlipColor}>
-                <MenuIcon maskId={1001} />
-              </span>
-            </NavLink>
-            <UncontrolledTooltip placement="bottom" target="toggleSidebar">
+            {
+              (localStorage.getItem('pathName') && !(localStorage.getItem('pathName') === '1' || localStorage.getItem('pathName') === '2'))
+              && <NavLink
+                className={`d-md-down-none ${s.toggleSidebar}`}
+                id="toggleSidebar"
+                onClick={this.toggleSidebar}
+              >
+                <span className={s.headerSvgFlipColor}>
+                  <MenuIcon maskId={1001} />
+                </span>
+              </NavLink>
+            }
+            {
+              (localStorage.getItem('pathName') && !(localStorage.getItem('pathName') === '1' || localStorage.getItem('pathName') === '2'))
+              && <UncontrolledTooltip placement="bottom" target="toggleSidebar">
               Turn on/off
               <br />
               sidebar
               <br />
               collapsing
             </UncontrolledTooltip>
+            }
             <NavLink className="fs-lg d-lg-none" onClick={this.switchSidebar}>
               <span
                 className={`rounded rounded-lg d-md-none d-sm-down-block`}
@@ -319,7 +325,7 @@ class Header extends React.Component {
 
         <div className="ml-auto">
           <ul className="nav main__navigationUL">
-            <li className="nav-item" onClick={() => this.hideSideBar(3)}>
+            <li className="nav-item" onClick={() => this.hideSideBar(1)}>
               <a className="nav-link" href="#/app/my-profile">
                 Home
               </a>
@@ -329,13 +335,13 @@ class Header extends React.Component {
                 My Profile
               </a>
             </li>
-            <li className="nav-item" onClick={() => this.hideSideBar(3)}>
+            <li className="nav-item" onClick={() => this.hideSideBar(2)}>
               <a className="nav-link" href="#/app/my-clients">
                 My Clients
               </a>
             </li>
-            <li className="nav-item" onClick={() => this.hideSideBar(3)}>
-              <a className="nav-link" href="#">
+            <li className="nav-item" onClick={() => this.hideSideBar(2)}>
+              <a className="nav-link" href="#/app/main/dashboard">
                 Help
               </a>
             </li>

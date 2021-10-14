@@ -87,7 +87,8 @@ class Sidebar extends React.Component {
           !this.props.sidebarOpened && !this.props.sidebarStatic
             ? s.sidebarClose
             : ""
-        } ${s.sidebarWrapper}`}
+          } ${(localStorage.getItem('pathName') &&
+            !(localStorage.getItem('pathName') === '1' || localStorage.getItem('pathName') === '2')) ? s.sidebarWrapper : s.closeSidbar}`}
       >
         <nav
           onMouseEnter={this.onMouseEnter}
