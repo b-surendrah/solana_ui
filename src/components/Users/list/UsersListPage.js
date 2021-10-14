@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UsersListTable from 'components/Users/list/UsersListTable';
+import UsersListTable from '../../../components/Users/list/UsersListTable';
 import { Alert } from 'reactstrap';
 
 import s from '../Users.module.scss';

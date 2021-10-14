@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UsersForm from 'components/Users/form/UsersForm';
+import UsersForm from '../../../components/Users/form/UsersForm';
 import { push } from 'connected-react-router';
 import actions from '../../../actions/usersFormActions';
 import { connect } from 'react-redux';

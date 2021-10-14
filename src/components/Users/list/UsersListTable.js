@@ -1,4 +1,4 @@
-import * as dataFormat from 'components/Users/list/UsersDataFormatters';
+import * as dataFormat from '../../../components/Users/list/UsersDataFormatters';
 import actions from '../../../actions/usersListActions';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -22,7 +22,7 @@ import {
   SearchField
 } from 'react-bootstrap-table';
 
-import Widget from 'components/Widget';
+import Widget from '../../../components/Widget';
 
 import s from '../Users.module.scss';
 
