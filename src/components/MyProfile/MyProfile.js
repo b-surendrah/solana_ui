@@ -12,6 +12,7 @@ import Label from "reactstrap/lib/Label";
 import Progress from "reactstrap/lib/Progress";
 import Row from "reactstrap/lib/Row";
 import Table from "reactstrap/lib/Table";
+import axios from 'axios';
 import UncontrolledButtonDropdown from "reactstrap/lib/UncontrolledButtonDropdown";
 import HeaderProfile from "../../components/HeaderProfile/HeaderProfile";
 import Widget from "../../components/Widget/Widget";
@@ -56,44 +57,105 @@ class MyProfile extends React.Component {
     super();
     localStorage.setItem('pathName', '1');
     this.state = {
-      sortableList: [
-        {
-          id: "03",
-          text: "Is entity an offshore trust?",
-        },
-        {
-          id: "01",
-          text: "Does entity have complex structure if ownership?",
-        },
-        {
-          id: "04",
-          text: "Is the entity an unregulated investment / fund manager?",
-        },
-        {
-          id: "02",
-          text: "Is entity an FGO or Embassy or Consulate from a high risk country?",
-        },
-      ],
+      entityDetails: [],
+      modalPop : false,
+      demo:true
     };
+  }
+  toggle(id) {
+    this.setState((prevState) => ({
+      [id]: !prevState[id],
+    }));
+  }
+  componentDidMount() {
+    axios.get('http://localhost:4000/getCustomer/' + localStorage.getItem ('account_id'))
+    .then((response) => {
+    console.log(response);
+    localStorage.setItem('basicDetails', response.data.basicDetails);
+    localStorage.setItem('entityDetails',response.data.entityDetails);
+    this.setState({entityDetails: response.data.entityDetails });
+    this.setState({modalPop: response.data ? false : true });
+
+  });
+
+
+  //  let response = {"data" : {
+		
+	// 	"entityDetails": [{
+  //     "entityName" : "surendra",
+  //     "country":"India",
+  //     "consentDate":"12-05-1990",
+  //     "action":"Revoke"
+      
+  //     }, {
+  //     "entityName" : "Suresh",
+  //     "country":"India",
+  //     "consentDate":"12-05-1990",
+  //     "action":"Revoke"
+      
+  //     }],
+  //     "basicDetails" :{
+  //     "legalName" : "ABC Corporation",
+  //     "leiRegistrationStatus": "Registered",
+  //     "primaryCountryOfOperations": "12345",
+  //     "swiftCode":"ABC123",
+  //     "incorporationCountry" : "Singapore",
+  //     "incorporationDate" : "12-03-2020",
+  //     "entityType" :"Client",
+  //     "registrationNumber" :"BAIPB2124",
+  //     "lei":"12wert",
+  //     "primaryIsicCode":"123678",
+  //     "registeredAddress" : {
+  //      "addressLine1" :"12-23-45",
+  //      "legalName" : "ABC corp",
+  //      "addressLine2" : "SWER",
+  //      "state": "CHangi",
+  //      "city":"SG",
+  //      "country":"Singapore"
+      
+  //     },
+  //     "operational" :{
+  //     "addressLine1" :"12wer",
+  //      "legalName" : "ABC crop",
+  //      "addressLine2" : "SWER",
+  //      "city":"SG",
+  //      "state": "Changi",
+  //      "country":"SG"
+      
+      
+  //     }
+      
+  //     }
+      
+  //     }
+      
+  //     };
+  // let response = { "data" : {}};
+  //  localStorage.setItem('basicDetails', JSON.stringify(response.data.basicDetails));
+  //   localStorage.setItem('entityDetails',JSON.stringify(response.data.entityDetails));
+  //   this.setState({entityDetails: response.data.entityDetails });
+  //   this.setState({modalPop: response.data.basicDetails ? false : true });
+
   }
 
   render() {
+    const { demo } = this.state;
     return (
       <div>
-       {/* <Modal size="sm" isOpen={true}>
-          <ModalHeader>Small modal</ModalHeader>
+        {this.state.modalPop && (<Modal size="sm" isOpen={demo} toggle={() => this.toggle("demo")}>
+          <ModalHeader toggle={() => this.toggle("demo")}>My Profile Info</ModalHeader>
           <ModalBody className="bg-white">
             No Profile exist , click CONTINUE to create profile and submit for KYC
           </ModalBody>
           <ModalFooter>
-            <Button color="default">Close</Button>
+            <Button color="default" onClick={() => this.toggle("demo")}>Close</Button>
             <Button color="primary">
               <a className="nav-link" href="#/app/basic-details">
                 CONTINUE
               </a>
             </Button>
           </ModalFooter>
-        </Modal> */}
+        </Modal> )}
         <div className="col-12">
           <div className="text-center py-4 clients__sec">
             <h3 className="cli__hdr">My Profile Shared with</h3>
@@ -113,6 +175,29 @@ class MyProfile extends React.Component {
               </tr>
             </thead>
             <tbody>
+            {this.state.entityDetails && this.state.entityDetails.map (entity => (
+              <tr className="fs-sm">
+              <td className="hidden-sm-down">
+                <a href="#">{entity.entityName}</a>
+              </td>
+              <td className="hidden-sm-down">{entity.country}</td>
+
+              <td className="hidden-sm-down">{entity.consentDate}</td>
+              <td className="hidden-sm-down">
+                <Button color="danger" type="submit" className="btn-sm mr-xs">
+                {entity.action}
+                </Button>
+              </td>
+              <td className="hidden-sm-down">
+                <img src={more} width="15" alt="options" />
+              </td>
+            </tr>
+            ))
+
+             
+            
+            }
+            {/* <tbody>
               <tr className="fs-sm">
                 <td className="hidden-sm-down">
                   <a href="#">XYZ Company Private Limited</a>
@@ -177,7 +262,8 @@ class MyProfile extends React.Component {
                   <img src={more} width="15" alt="options" />
                 </td>
               </tr>
-            </tbody>
+            </tbody> */}
+           </tbody>
           </Table>
         </div>
       </div>

@@ -10,8 +10,8 @@ class Login extends React.Component {
         super(props);
 
         this.state = {
-            email: 'admin@flatlogic.com',
-            password: 'password',
+            email: 'admin@kyc.com',
+            password: 'ABC12345',
         };
         localStorage.setItem('pathName', 1);
     }

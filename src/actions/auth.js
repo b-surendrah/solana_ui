@@ -5,7 +5,6 @@ import { toast } from 'react-toastify';
 import { push } from 'connected-react-router';
 import Errors from '../components/FormItems/error/errors';
 import { mockUser } from './mock';
-
 export const AUTH_FAILURE = 'AUTH_FAILURE';
 export const LOGIN_REQUEST = 'LOGIN_REQUEST';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
@@ -78,6 +77,8 @@ export function logoutUser() {
         });
         localStorage.removeItem('token');
         localStorage.removeItem('user');
+        localStorage.removeItem('account_id');
+        localStorage.removeItem('basicDetails');
         axios.defaults.headers.common['Authorization'] = "";
         dispatch({
           type: LOGOUT_SUCCESS,

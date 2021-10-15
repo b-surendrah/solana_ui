@@ -10,6 +10,7 @@ import jwt from "jsonwebtoken";
 import microsoft from "../../../images/microsoft.png";
 import { push } from "connected-react-router";
 import img from "../../../images/snow-flake.png";
+import axios from "axios";
 
 class Login extends React.Component {
   static propTypes = {
@@ -31,7 +32,7 @@ class Login extends React.Component {
 
     this.state = {
       email: "admin@kyc.com",
-      password: "password",
+      password: "ABC12345",
     };
     localStorage.setItem('pathName', 1);
     this.doLogin = this.doLogin.bind(this);
@@ -51,6 +52,11 @@ class Login extends React.Component {
   }
 
   doLogin(e) {
+    axios.get('http://localhost:4000/getAccount/' + this.state.email)
+    .then((response) => {
+    console.log(response);
+    localStorage.setItem('account_id', response.data.account_id);
+     });
     e.preventDefault();
     this.props.dispatch(
       loginUser({ email: this.state.email, password: this.state.password })

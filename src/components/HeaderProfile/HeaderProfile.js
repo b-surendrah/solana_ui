@@ -16,8 +16,8 @@ class HeaderProfile extends React.Component {
     super(props);
 
     this.state = {
-      email: "admin@flatlogic.com",
-      password: "password",
+      email: "admin@kyc.com",
+      password: "ABC12345",
     };
   }
   
