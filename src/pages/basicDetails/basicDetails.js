@@ -34,7 +34,7 @@ class BasicDetails extends React.Component {
         primaryIsicCode:'',
         registeredAddress : {
          addressLine1 :'',
-         legalName : '',
+         pincode : '',
          addressLine2 : '',
          state: '',
        city : '',
@@ -43,7 +43,7 @@ class BasicDetails extends React.Component {
         },
         operational :{
         addressLine1 :'',
-         legalName : '',
+         pincode : '',
          addressLine2 : '',
          state: '',
        city: '',
@@ -331,22 +331,7 @@ class BasicDetails extends React.Component {
                         </FormGroup>
                       </Col>
                       <Col md={6}>
-                        <FormGroup>
-                          <Label for="no-borders-input" className="trans-label">
-                            Legal Name
-                          </Label>
-                          <Input
-                            type="text"
-                            placeholder=""
-                            id="no-borders-input"
-                            className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
-                            defaultValue={this.state.basicDetails.registeredAddress.legalName}
-                            readOnly={this.state.readOnly}
-                            name = "registeredAddress.legalName"
-                        onChange= {this.handleChange}
-                          />
-                        </FormGroup>
-                        <FormGroup>
+                      <FormGroup>
                           <Label for="no-borders-input" className="trans-label">
                             Address Line 2
                           </Label>
@@ -373,6 +358,21 @@ class BasicDetails extends React.Component {
                             defaultValue={this.state.basicDetails.registeredAddress.state}
                             readOnly={this.state.readOnly}
                             name = "registeredAddress.state"
+                        onChange= {this.handleChange}
+                          />
+                        </FormGroup>
+                        <FormGroup>
+                          <Label for="no-borders-input" className="trans-label">
+                            Pin Code
+                          </Label>
+                          <Input
+                            type="text"
+                            placeholder=""
+                            id="no-borders-input"
+                            className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
+                            defaultValue={this.state.basicDetails.registeredAddress.pincode}
+                            readOnly={this.state.readOnly}
+                            name = "registeredAddress.pincode"
                         onChange= {this.handleChange}
                           />
                         </FormGroup>
@@ -431,21 +431,6 @@ class BasicDetails extends React.Component {
                       <Col md={6}>
                         <FormGroup>
                           <Label for="no-borders-input" className="trans-label">
-                            Legal Name
-                          </Label>
-                          <Input
-                            type="text"
-                            placeholder=""
-                            id="no-borders-input"
-                            className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
-                            defaultValue={this.state.basicDetails.operational.legalName}
-                            readOnly={this.state.readOnly}
-                            name = "operational.legalName"
-                        onChange= {this.handleChange}
-                          />
-                        </FormGroup>
-                        <FormGroup>
-                          <Label for="no-borders-input" className="trans-label">
                             Address Line 2
                           </Label>
                           <Input
@@ -471,6 +456,21 @@ class BasicDetails extends React.Component {
                             defaultValue={this.state.basicDetails.operational.state}
                             readOnly={this.state.readOnly}
                             name = "operational.state"
+                        onChange= {this.handleChange}
+                          />
+                        </FormGroup>
+                        <FormGroup>
+                          <Label for="no-borders-input" className="trans-label">
+                            Pin Code
+                          </Label>
+                          <Input
+                            type="text"
+                            placeholder=""
+                            id="no-borders-input"
+                            className={`${this.state.readOnly === true ? 'input-no-border' : ''} bg-gray-lighter`}
+                            defaultValue={this.state.basicDetails.operational.pincode}
+                            readOnly={this.state.readOnly}
+                            name = "operational.pincode"
                         onChange= {this.handleChange}
                           />
                         </FormGroup>

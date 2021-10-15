@@ -90,6 +90,7 @@ class HeaderProfile extends React.Component {
                     <Button
                       color="primary"
                       type="submit"
+                      href="#/app/my-profile"
                       className="btn-sm mr-xs"
                     >
                       Manage Access
